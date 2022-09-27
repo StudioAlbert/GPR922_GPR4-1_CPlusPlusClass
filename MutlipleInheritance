@@ -1,0 +1,24 @@
+Multiple inheritance
+
+Créer un hiérarchie de classe selon le schéma suivant
+Race
+int lifePoints
+|
+|                    |
+Orc                  Human
+Waagh()              Faith()
+LifePoint = 50       LifePoint = 35;
+
+CombatClass
+int attack
+Combat()
+|
+|                    |
+Archer               Warrior
+Shoot()
+nbWeapons = 50       DamageBonus = 40%;
+
+Create Grimgor the Orc Warrior
+Create RobinHood, the human Archer
+
+Could you create an Magician Elf ?

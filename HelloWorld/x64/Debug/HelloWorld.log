@@ -1,0 +1,5 @@
+﻿  HelloWorld.cpp
+D:\5_Repos\SAE-CPlusPlusClass\main\CPlusPlus-Class\HelloWorld\HelloWorld.cpp(7,5): error C2065: 'Dice' : identificateur non déclaré
+D:\5_Repos\SAE-CPlusPlusClass\main\CPlusPlus-Class\HelloWorld\HelloWorld.cpp(7,10): error C2146: erreur de syntaxe : absence de ';' avant l'identificateur 'diceA'
+D:\5_Repos\SAE-CPlusPlusClass\main\CPlusPlus-Class\HelloWorld\HelloWorld.cpp(7,10): error C2065: 'diceA' : identificateur non déclaré
+D:\5_Repos\SAE-CPlusPlusClass\main\CPlusPlus-Class\HelloWorld\HelloWorld.cpp(7,17): error C2065: 'diceB' : identificateur non déclaré

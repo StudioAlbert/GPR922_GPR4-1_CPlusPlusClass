@@ -1,0 +1,7 @@
+﻿  01.02 - Array C++ Style.cpp
+D:\5_Repos\SAE-CPlusPlusClass\main\CPlusPlus-Class\01.02 - Array C++ Style\01.02 - Array C++ Style.cpp(24,22): warning C4244: '=' : conversion de 'float' en '_Ty', perte possible de données
+          with
+          [
+              _Ty=int
+          ]
+  01.02 - Array C++ Style.vcxproj -> D:\5_Repos\SAE-CPlusPlusClass\main\CPlusPlus-Class\x64\Debug\01.02 - Arrays C++ Style.exe

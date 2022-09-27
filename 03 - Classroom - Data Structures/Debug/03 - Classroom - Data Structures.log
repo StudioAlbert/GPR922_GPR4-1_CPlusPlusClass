@@ -1,0 +1,4 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (03 - Classroom - Data Structures.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  03 - Classroom - Data Structures.cpp
+D:\5_Repos\SAE921-GRP4100-CPlusPlus-Class\CPlusPlus-Class\03 - Classroom - Data Structures\03 - Classroom - Data Structures.cpp(44,21): warning C4018: '<': signed/unsigned mismatch
+  03 - Classroom - Data Structures.vcxproj -> D:\5_Repos\SAE921-GRP4100-CPlusPlus-Class\CPlusPlus-Class\Debug\03 - Classroom - Data Structures - Vector.exe
