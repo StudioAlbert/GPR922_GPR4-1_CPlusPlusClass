@@ -5,12 +5,17 @@
 
 Dealer::Dealer()
 {
-	SetupDeck();
-	ShuffleDeck();
+
+	rndNumber = std::mt19937(rd());
+
 }
 
-void Dealer::SetupDeck()
+
+void Dealer::ResetDeck()
 {
+
+	deck.clear();
+
 	for (int hand = 0; hand < (int)CardSuit::End; hand++)
 	{
 		for (int value = (int)CardValue::Two; value < (int)CardValue::End; value++)
@@ -21,15 +26,9 @@ void Dealer::SetupDeck()
 			);
 		}
 	}
-}
 
-void Dealer::ShuffleDeck()
-{
-
-	//static std::random_device rd;
-	//static std::mt19937 rndNumber(rd());
-
-	std::shuffle(deck.begin(), deck.end(), std::random_device());
+	std::shuffle(deck.begin(), deck.end(), rndNumber);
+	//std::random_shuffle(deck.begin(), deck.end());
 
 }
 

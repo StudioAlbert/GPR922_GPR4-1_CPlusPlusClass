@@ -7,6 +7,11 @@ Player::Player(const std::string& name) : _name(name)
 {
 }
 
+void Player::ResetHand()
+{
+	_hand.clear();
+}
+
 void Player::GetACard(const Card card)
 {
 	if(_hand.size() < 5)
@@ -46,41 +51,24 @@ Pattern Player::GetPattern()
 	Pattern result = Pattern();
 
 	if(Pattern::HasRoyalFlush(_hand, result))
-	{
-		//return result;
-	}
+	{}
 	else if (Pattern::HasStraightFlush(_hand, result))
-	{
-
-	}
+	{}
 	else if (Pattern::HasFourOfAKind(_hand, result))
-	{
-
-	}
+	{}
 	else if (Pattern::HasFullHouse(_hand, result))
-	{
-
-	}
+	{}
 	else if (Pattern::HasFlush(_hand, result))
-	{
-
-	}
+	{}
 	else if (Pattern::HasStraight(_hand, result))
-	{
-
-	}
+	{}
 	else if (Pattern::HasThreeOfAKind(_hand, result))
-	{
-
-	}
+	{}
 	else if (Pattern::HasTwoPairs(_hand, result))
-	{
-
-	}
+	{}
 	else if (Pattern::HasPair(_hand, result))
-	{
-
-	}else
+	{}
+	else
 	{
 		result.PatternValue = Pattern::PatternValue::Highcard;
 		result.bestCardValues = Pattern::BestCards(_hand);
@@ -88,6 +76,11 @@ Pattern Player::GetPattern()
 	
 	return result;
 	
+}
+
+const std::string Player::GetName()
+{
+	return _name;
 }
 
 

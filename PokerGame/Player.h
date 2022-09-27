@@ -18,10 +18,13 @@ class Player
 public:
 	Player(const std::string& name);
 
-	void GetACard(Card);
 	std::string ToString();
 
-	void CountAValue();
 	Pattern GetPattern();
+	const std::string GetName();
+
+	void ResetHand();
+	void GetACard(Card);
+
 };
 

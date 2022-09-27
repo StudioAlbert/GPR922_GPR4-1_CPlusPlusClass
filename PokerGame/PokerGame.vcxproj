@@ -128,7 +128,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Card.cpp" />
-    <ClCompile Include="ClassicCard.cpp" />
     <ClCompile Include="Dealer.cpp" />
     <ClCompile Include="Pattern.cpp" />
     <ClCompile Include="Player.cpp" />
@@ -136,7 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Card.h" />
-    <ClInclude Include="ClassicCard.h" />
     <ClInclude Include="Dealer.h" />
     <ClInclude Include="Pattern.h" />
     <ClInclude Include="Player.h" />

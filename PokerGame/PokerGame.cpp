@@ -7,7 +7,6 @@
 #include <set>
 
 #include "Card.h"
-#include "ClassicCard.h"
 #include "Dealer.h"
 #include "Player.h"
 
@@ -35,7 +34,12 @@ int main()
 
 		std::string typed;
 
-		dealer.ShuffleDeck();
+		dealer.ResetDeck();
+		for (auto& player : players)
+		{
+			player.ResetHand();
+		}
+
 
 		for (int nbCard = 0; nbCard < 5; ++nbCard)
 		{
@@ -45,12 +49,33 @@ int main()
 			}
 		}
 
+		std::string bestPlayerName;
+		Pattern bestPattern;
+		
 		for (auto& player : players)
 		{
+
 			std::cout << player.ToString() << std::endl;
 			std::cout << player.GetPattern().ToString() << std::endl;
 			std::cout << std::endl;
+
+			if(player.GetPattern().PatternValue > bestPattern.PatternValue)
+			{
+				// We find something with better hand
+				bestPlayerName = player.GetName();
+				bestPattern = player.GetPattern();
+
+			}else if(player.GetPattern().PatternValue == bestPattern.PatternValue)
+			{
+				// What if ex aequo ?
+
+			}
+			
 		}
+
+		// Who is the winner ?
+		std::cout << "And the winner is " << bestPlayerName << " with " << bestPattern.ToString() << std::endl;
+		std::cout << std::endl;
 
 		// Quit or not ?????
 		std::cout << "---------------------------------------" << std::endl;

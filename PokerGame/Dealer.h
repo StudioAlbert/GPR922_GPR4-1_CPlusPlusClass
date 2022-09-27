@@ -1,5 +1,6 @@
 #pragma once
 #include <list>
+#include <random>
 #include <vector>
 
 #include "Card.h"
@@ -7,12 +8,13 @@
 class Dealer
 {
 	std::vector<Card> deck;
+	std::random_device rd;
+	std::mt19937 rndNumber;
 
-	void SetupDeck();
 
 public:
 	Dealer();
-	void ShuffleDeck();
+	void ResetDeck();
 	const Card GiveACard();
 
 };
