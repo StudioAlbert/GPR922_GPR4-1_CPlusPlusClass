@@ -41,7 +41,7 @@ int main()
 		}
 
 
-		for (int nbCard = 0; nbCard < 5; ++nbCard)
+		for (int nbCard = 0; nbCard < 5; nbCard++)
 		{
 			for (auto& player : players)
 			{
@@ -49,32 +49,24 @@ int main()
 			}
 		}
 
-		std::string bestPlayerName;
-		Pattern bestPattern;
+		Player winnerIs("WinnerIs");
 		
-		for (auto& player : players)
+		for (auto& tempPlayerInTheLoop : players)
 		{
 
-			std::cout << player.ToString() << std::endl;
-			std::cout << player.GetPattern().ToString() << std::endl;
+			std::cout << tempPlayerInTheLoop.ToString() << std::endl;
+			std::cout << tempPlayerInTheLoop.GetPattern().ToString() << std::endl;
 			std::cout << std::endl;
 
-			if(player.GetPattern().PatternValue > bestPattern.PatternValue)
+			if(tempPlayerInTheLoop > winnerIs)
 			{
-				// We find something with better hand
-				bestPlayerName = player.GetName();
-				bestPattern = player.GetPattern();
-
-			}else if(player.GetPattern().PatternValue == bestPattern.PatternValue)
-			{
-				// What if ex aequo ?
-
+				winnerIs = tempPlayerInTheLoop;
 			}
 			
 		}
 
 		// Who is the winner ?
-		std::cout << "And the winner is " << bestPlayerName << " with " << bestPattern.ToString() << std::endl;
+		std::cout << "And the winner is " << winnerIs.GetName() << " with " << winnerIs.GetPattern().ToString() << std::endl;
 		std::cout << std::endl;
 
 		// Quit or not ?????

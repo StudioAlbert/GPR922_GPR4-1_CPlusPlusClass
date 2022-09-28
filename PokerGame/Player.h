@@ -10,6 +10,8 @@
 
 class Player
 {
+
+private:
 	std::vector<Card> _hand;
 	std::string _name;
 
@@ -25,6 +27,9 @@ public:
 
 	void ResetHand();
 	void GetACard(Card);
+
+	bool operator>(Player&);
+	Player operator=(Player&);
 
 };
 

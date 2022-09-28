@@ -7,8 +7,23 @@ Player::Player(const std::string& name) : _name(name)
 {
 }
 
+Player Player::operator=(Player& oldPlayer)
+{
+	this->_name = oldPlayer._name;
+	this->_hand = oldPlayer._hand;
+	
+	return *this;
+
+}
+
+bool Player::operator>(Player& p)
+{
+	return this->GetPattern().PatternValue > p.GetPattern().PatternValue;
+}
+
 void Player::ResetHand()
 {
+	this->GetName();
 	_hand.clear();
 }
 
